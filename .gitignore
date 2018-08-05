@@ -1,13 +1,5 @@
-.gradle
-/access.properties
-/local.properties
-/cloud.properties
-/maven.properties
-/.idea/workspace.xml
-/.idea/libraries
 .DS_Store
 /build
-local.properties
 *.iws
 *.iml
 *.tmp
@@ -15,4 +7,3 @@ local.properties
 bin/
 gen/
 out/
-proguard/

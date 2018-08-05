@@ -87,5 +87,6 @@ public class Test2 {
         if (matrix[pRight.i][pRight.j] == 1 && !visited.contains(pRight)) {
             result.add(pRight);
         }
+        return result;
     }
 }
