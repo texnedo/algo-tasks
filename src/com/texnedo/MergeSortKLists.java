@@ -1,15 +1,12 @@
 package com.texnedo;
 
+import com.texnedo.utils.ListNode;
+
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class MergeSortKLists {
 
-  public static class ListNode {
-      int val;
-      ListNode next;
-      ListNode(int x) { val = x; }
- }
     public ListNode mergeKLists(ListNode[] lists) {
         ListNode result = null;
         PriorityQueue<ListNode> nodes = new PriorityQueue<>(new Comparator<ListNode>() {
