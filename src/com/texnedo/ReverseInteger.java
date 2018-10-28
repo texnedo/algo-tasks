@@ -5,7 +5,7 @@ public class ReverseInteger {
         ReverseInteger integer = new ReverseInteger();
         System.out.println(integer.reverse(-123));
     }
-    
+
     public int reverse(int x) {
         if (x >= Integer.MAX_VALUE || x <= Integer.MIN_VALUE) {
             return 0;
