@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class Interval {
+public class Interval implements Comparable <Interval> {
     public int start;
     public int end;
     public Interval() { start = 0; end = 0; }
@@ -55,5 +55,10 @@ public class Interval {
         return "[" + start +
                 ", " + end +
                 ']';
+    }
+
+    @Override
+    public int compareTo(Interval o) {
+        return Integer.compare(start, o.start);
     }
 }
