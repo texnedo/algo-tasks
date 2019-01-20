@@ -3,7 +3,7 @@ package com.texnedo;
 import java.util.LinkedList;
 import java.util.List;
 
-public class GenerateParanthesis {
+public class GenerateAllParentheses {
     public static void main(String[] args) {
         System.out.println(generateParenthesis(3));
     }
@@ -14,9 +14,10 @@ public class GenerateParanthesis {
         return result;
     }
 
-    public static void generateParenthesisInternal(int opened, int closed,
-                                            List<String> result,
-                                            StringBuilder current) {
+    public static void generateParenthesisInternal(int opened,
+                                                   int closed,
+                                                   List<String> result,
+                                                   StringBuilder current) {
         if (opened == 0 && closed == 0) {
             if (current != null) {
                 result.add(current.toString());
