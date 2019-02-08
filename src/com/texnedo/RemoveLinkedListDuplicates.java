@@ -56,7 +56,7 @@ public class RemoveLinkedListDuplicates {
         return head;
     }
 
-    ListNode removeDuplicatesTwoPass(ListNode list) {
+    ListNode removeDuplicatesNoOrder(ListNode list) {
         if (list == null) {
             throw new IllegalArgumentException();
         }
