@@ -2,12 +2,12 @@ package com.texnedo;
 
 import java.util.Arrays;
 
-public class RemoveDuplicatesInplace {
+public class RemoveDuplicatesInPlace {
 
     public static void main(String[] args) {
         int[] array = {0, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3};
-        RemoveDuplicatesInplace removeDuplicatesInplace = new RemoveDuplicatesInplace();
-        int length = removeDuplicatesInplace.removeDuplicates(array);
+        RemoveDuplicatesInPlace removeDuplicatesInPlace = new RemoveDuplicatesInPlace();
+        int length = removeDuplicatesInPlace.removeDuplicates(array);
         int[] result = Arrays.copyOf(array, length);
         System.out.println(Arrays.toString(result));
     }
