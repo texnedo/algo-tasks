@@ -18,10 +18,14 @@ public class ListNode {
     }
 
     public static ListNode build(String text) {
+        return build(text, "->");
+    }
+
+    public static ListNode build(String text, String delimiter) {
         if (text == null || text.length() == 0) {
             return null;
         }
-        final String[] tokens = text.split("->");
+        final String[] tokens = text.split(delimiter);
         ListNode head = null;
         ListNode next = null;
         for (String token : tokens) {
@@ -34,5 +38,12 @@ public class ListNode {
             }
         }
         return head;
+    }
+
+    @Override
+    public String toString() {
+        return "ListNode{" +
+                "val=" + val +
+                '}';
     }
 }
