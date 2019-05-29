@@ -7,6 +7,10 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.*;
 
+/**
+ * https://www.leetfree.com/problems/design-log-storage-system.html
+ * Design simple log storage implementation that allow ranged selects by date.
+ * */
 public class LogStorageSystem {
     private final TreeMap<Long, Integer> logTree = new TreeMap<>();
     private final static int[] EMPTY_RESULT = new int[0];
@@ -20,12 +24,24 @@ public class LogStorageSystem {
     }
     private static final DateTimeFormatter format = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
 
-    void put(int id, String timestamp) throws DateTimeParseException {
+    /**
+     * Inserts a log record to the structure
+     * @param id log record id
+     * @param timestamp log record timestamp
+     * */
+    public void put(int id, String timestamp) throws DateTimeParseException {
         final LocalDateTime date = LocalDateTime.parse(timestamp);
         logTree.put(date.toEpochSecond(ZoneOffset.UTC), id);
     }
 
-    int[] retrieve(String from, String to, Grain grain) throws DateTimeParseException {
+    /**
+     * Finds appropriate log records using a date range
+     * @param from date-time in ISO format
+     * @param to date-time in ISO format
+     * @param grain time boundary precision
+     * @return found log record id array
+     * */
+    public int[] retrieve(String from, String to, Grain grain) throws DateTimeParseException {
         final long utcFrom = stripToGrain(from, grain);
         final long utcTo = stripToGrain(to, grain);
         final SortedMap<Long, Integer> items = logTree.subMap(utcFrom, utcTo);
