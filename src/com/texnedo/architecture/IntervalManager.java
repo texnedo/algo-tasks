@@ -20,7 +20,6 @@ import java.util.*;
  * C
  * 10
  * |-----A ----|-----B----|-----C----|-----------------------------------#----------------------------------|
- *
  * */
 public class IntervalManager {
     private static final int MAX_TOTAL_ROLLOUT = 100;
