@@ -2,7 +2,7 @@ package com.texnedo;
 
 import java.util.Scanner;
 
-public class OnesAndZeros {
+public class OnesAndZerosPrintMultithreaded {
     private static volatile boolean shouldExit = false;
     private static int lastValue = -1;
     private static final Object lastValueGuard = new Object();
