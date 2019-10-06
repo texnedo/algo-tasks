@@ -1,0 +1,17 @@
+docker run -d -v /var/run/docker.sock:/var/run/docker.sock:ro \
+              -v /proc/:/host/proc/:ro \
+              -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro \
+              -e DD_API_KEY=639cacc049e6c3fc0c193c70d6fdb419 \
+              -e DD_LOGS_ENABLED=true \
+              -e DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true \
+              -d -p 8125:8125/udp \
+              -d -p 8126:8126 \
+              datadog/agent:latest
+
+
+docker run -d -e DD_API_KEY=639cacc049e6c3fc0c193c70d6fdb419 \
+              -e DD_LOGS_ENABLED=true \
+              -e DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true \
+              -d -p 8125:8125/udp \
+              -d -p 8126:8126 \
+              datadog/agent:latest
