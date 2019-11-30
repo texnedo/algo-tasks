@@ -2,17 +2,19 @@ package com.texnedo;
 
 import java.util.*;
 
-class Item {
-    int num;
-    int count;
-}
-class ItemComparator implements Comparator<Item> {
-    @Override
-    public int compare(Item l, Item r) {
-        return Integer.compare(r.count, l.count);
-    }
-}
 class TopKFrequentNumbers {
+    static class Item {
+        int num;
+        int count;
+    }
+
+    static class ItemComparator implements Comparator<Item> {
+        @Override
+        public int compare(Item l, Item r) {
+            return Integer.compare(r.count, l.count);
+        }
+    }
+
     public static void main(String[] args) {
         int [] data = {1,1,1,2,2,3,4,4,4,4,4,4,4,5,5,5,5,5};
         System.out.println(topKFrequent(data, 3));
