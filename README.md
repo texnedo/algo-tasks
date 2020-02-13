@@ -21,3 +21,5 @@ https://www.geeksforgeeks.org/activity-selection-problem-greedy-algo-1/ - *sort 
 https://www.geeksforgeeks.org/boggle-set-2-using-trie/ - trie and search
 
 https://leetcode.com/problems/maximum-sum-circular-subarray/solution/ - 3 times Kadane's algorithm
+
+https://www.geeksforgeeks.org/look-and-say-sequence/ - simple iteration and count each digit group
