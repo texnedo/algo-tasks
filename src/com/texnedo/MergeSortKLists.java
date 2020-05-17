@@ -2,6 +2,7 @@ package com.texnedo;
 
 import com.texnedo.utils.ListNode;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
@@ -15,9 +16,7 @@ public class MergeSortKLists {
                 return Integer.compare(o1.val, o2.val);
             }
         });
-        for (ListNode node : lists) {
-            nodes.add(node);
-        }
+        nodes.addAll(Arrays.asList(lists));
         while (!nodes.isEmpty()) {
             ListNode node = nodes.poll();
             if (node == null) {
@@ -45,7 +44,8 @@ public class MergeSortKLists {
         ListNode l31 = new ListNode(2);
         ListNode l32 = new ListNode(6);
 
-        //ListNode[] input = new ListNode[3];
-        //input[0]
+        ListNode[] nodes = {l11, l12, l13, l21, l22, l23, l31, l32};
+        MergeSortKLists merge = new MergeSortKLists();
+        ListNode.print(merge.mergeKLists(nodes));
     }
 }
