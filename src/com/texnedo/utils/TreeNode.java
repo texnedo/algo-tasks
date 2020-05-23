@@ -15,6 +15,13 @@ public class TreeNode {
     public TreeNode() {
     }
 
+    @Override
+    public String toString() {
+        return "TreeNode{" +
+                "val=" + val +
+                '}';
+    }
+
     public static class TreeNodePtr {
         final TreeNode node;
 
