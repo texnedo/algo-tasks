@@ -6,8 +6,8 @@ import java.util.List;
 public class Graph {
     final List<Integer> connections[];
 
-
     public Graph(int N) {
+        //noinspection unchecked
         this.connections = new LinkedList[N];
     }
 
@@ -48,12 +48,12 @@ public class Graph {
     }
 
     public boolean hasCycle() {
-        boolean visited[] = new boolean[connections.length];
+        boolean[] visited = new boolean[connections.length];
         return hasCycle(visited, 0);
     }
 
     public boolean isTree() {
-        boolean visited[] = new boolean[connections.length];
+        boolean[] visited = new boolean[connections.length];
         if (hasCycle(visited, 0)) {
             return false;
         }

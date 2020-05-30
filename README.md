@@ -23,3 +23,5 @@ https://www.geeksforgeeks.org/boggle-set-2-using-trie/ - trie and search
 https://leetcode.com/problems/maximum-sum-circular-subarray/solution/ - 3 times Kadane's algorithm
 
 https://www.geeksforgeeks.org/look-and-say-sequence/ - simple iteration and count each digit group
+
+https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/  - reverse linked list and compute powers of 2

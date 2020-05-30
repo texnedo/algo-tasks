@@ -2,6 +2,10 @@ package com.texnedo;
 
 import java.util.*;
 
+/**
+ * https://leetcode.com/problems/accounts-merge/
+ * This task also could be solved with Union Fold algorithm.
+ * */
 public class AccountsMerge {
     public static void main(String[] args) {
         AccountsMerge merge = new AccountsMerge();

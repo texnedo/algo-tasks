@@ -9,6 +9,9 @@ import java.util.*;
  * Current implementation is slow as it runs DFS for after removal of each edge.
  * Although, algorithm https://www.geeksforgeeks.org/bridge-in-a-graph/ allows to reduce numbers
  * of DFS passes significantly.
+ *
+ * In DFS tree an edge (u, v) (u is parent of v in DFS tree) is bridge if there does not exist
+ * any other alternative to reach u or an ancestor of u from subtree rooted with v.
  * */
 public class CriticalConnectionsNetwork {
     public static void main(String[] args) {
