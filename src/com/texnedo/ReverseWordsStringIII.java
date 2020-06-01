@@ -4,6 +4,7 @@ public class ReverseWordsStringIII {
     public static void main(String[] args) {
         ReverseWordsStringIII stringIII = new ReverseWordsStringIII();
         System.out.println(stringIII.reverseWords("Let's take LeetCode contest"));
+        System.out.println(stringIII.reverseWords("Let's solve this coding task"));
     }
 
     public String reverseWords(String s) {
