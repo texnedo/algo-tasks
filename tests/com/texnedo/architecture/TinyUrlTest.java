@@ -16,6 +16,12 @@ public class TinyUrlTest {
     }
 
     @Test
+    public void convertToIntSmall() {
+        final String url = TinyUrl.convertIdToString(10);
+        assertEquals(TinyUrl.convertStringToId(url), 10);
+    }
+
+    @Test
     public void testGetShortUrl() {
         final TinyUrl url = new TinyUrl();
         for (int i = 0; i < 10000; i++) {
