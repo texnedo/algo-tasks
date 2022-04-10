@@ -85,19 +85,19 @@ void testMultiMap() {
     std::cout << std::endl;
 }
 
-int main() {
-    Solution s;
-
-    std::vector<int> data2 = {0, 0};
-    std::cout << "result: " << s.isNStraightHand(data2, 2) << std::endl;
-
-    std::vector<int> data0 = {1,2,3,4,5,6};
-    std::cout << "result: " << s.isNStraightHand(data0, 2) << std::endl;
-
-    std::vector<int> data = {1,2,3,6,2,3,4,7,8};
-    std::cout << "result: " << s.isNStraightHand(data, 3) << std::endl;
-
-    std::vector<int> data1 = {1,2,3,4,5};
-    std::cout << "result: " << s.isNStraightHand(data1, 4) << std::endl;
-    return 0;
-}
+//int main() {
+//    Solution s;
+//
+//    std::vector<int> data2 = {0, 0};
+//    std::cout << "result: " << s.isNStraightHand(data2, 2) << std::endl;
+//
+//    std::vector<int> data0 = {1,2,3,4,5,6};
+//    std::cout << "result: " << s.isNStraightHand(data0, 2) << std::endl;
+//
+//    std::vector<int> data = {1,2,3,6,2,3,4,7,8};
+//    std::cout << "result: " << s.isNStraightHand(data, 3) << std::endl;
+//
+//    std::vector<int> data1 = {1,2,3,4,5};
+//    std::cout << "result: " << s.isNStraightHand(data1, 4) << std::endl;
+//    return 0;
+//}

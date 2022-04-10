@@ -3,4 +3,4 @@ project(algo_clion)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(algo_clion HandOfStraights.cpp)
+add_executable(algo_clion HandOfStraights.cpp MaximumPointsYouCanObtainCards.cpp FruitIntoBaskets.cpp)
