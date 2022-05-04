@@ -1,4 +1,4 @@
-package com.texnedo;
+package com.texnedo.architecture.threading;
 
 import java.util.Scanner;
 
