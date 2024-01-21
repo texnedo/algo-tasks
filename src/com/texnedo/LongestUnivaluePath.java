@@ -1,7 +1,9 @@
 package com.texnedo;
 
 import com.texnedo.utils.TreeNode;
-import javafx.util.Pair;
+
+import java.util.AbstractMap;
+import java.util.Map;
 
 public class LongestUnivaluePath {
 
@@ -16,33 +18,33 @@ public class LongestUnivaluePath {
     }
 
     public int longestUnivaluePath(TreeNode root) {
-        Pair<Integer, Integer> result = longestUnivaluePathInternal(root);
+        Map.Entry<Integer, Integer> result = longestUnivaluePathInternal(root);
         if (result == null) {
             return 0;
         }
         return result.getValue();
     }
 
-    public Pair<Integer, Integer> longestUnivaluePathInternal(TreeNode root) {
+    public Map.Entry<Integer, Integer> longestUnivaluePathInternal(TreeNode root) {
         if (root == null) {
             return null;
         }
-        Pair<Integer, Integer> maxLeft = null;
+        Map.Entry<Integer, Integer> maxLeft = null;
         if (root.left != null) {
             maxLeft = longestUnivaluePathInternal(root.left);
             if (maxLeft != null && maxLeft.getKey() == root.val) {
-                maxLeft = new Pair<>(root.val, maxLeft.getValue() + 1);
+                maxLeft = new AbstractMap.SimpleEntry<>(root.val, maxLeft.getValue() + 1);
             }
         }
-        Pair<Integer, Integer> maxRight = null;
+        Map.Entry<Integer, Integer> maxRight = null;
         if (root.right != null) {
             maxRight = longestUnivaluePathInternal(root.right);
             if (maxRight != null && maxRight.getKey() == root.val) {
-                maxRight = new Pair<>(root.val, maxRight.getValue() + 1);
+                maxRight = new AbstractMap.SimpleEntry<>(root.val, maxRight.getValue() + 1);
             }
         }
         if (maxLeft == null && maxRight == null) {
-            return new Pair<>(root.val, 0);
+            return new AbstractMap.SimpleEntry<>(root.val, 0);
         }
         if (maxLeft == null) {
             return maxRight;
@@ -51,7 +53,7 @@ public class LongestUnivaluePath {
             return maxLeft;
         }
         if (root.val == maxLeft.getKey() && root.val == maxRight.getKey()) {
-            return new Pair<>(root.val, maxLeft.getValue() + maxRight.getValue());
+            return new AbstractMap.SimpleEntry<>(root.val, maxLeft.getValue() + maxRight.getValue());
         }
         return Math.max(maxLeft.getValue(), maxRight.getValue()) == maxLeft.getValue()
                 ? maxLeft : maxRight;
